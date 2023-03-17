@@ -1,103 +1,130 @@
 
-*{
-    margin:0px;
-    padding: 0px;
-    font-family:'Courier New', Courier, monospace;
-    scroll-behavior: smooth;
-}
-/* NAV-BAR*/
-.logo {
-    display: flex;
-    align-items: center;
-}
-.navBar{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: calc(100% - 6rem);
-    margin-inline: auto;
-    height: 100%;
-}
-
-nav {
-    background-color: #333;
-    height: 60px;
-  }
-  
-  nav ul {
-    list-style: none;
+* {
     margin: 0;
     padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-  }
-  
-  nav li {
-    margin: 0 10px;
-  }
-  
-  nav a {
-    color: #fff;
+    box-sizing: border-box;
     text-decoration: none;
-    font-size: 18px;
-    font-weight: bold;
-    text-transform: uppercase;
-    transition: all 0.3s ease;
-  }
-  
-  nav a:hover {
-    color: #f1c40f;
-  }
-  #openBtn {
-    display: none;
-  }
-@media(max-width: 800px) {
-    #openBtn {
-        display: block;
-    }
-    .navLinks {
-        display: none;
-    }
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
 }
 
-/* HERO BANNNER*/
-.hero-banner {
-    /* background-image: url('your-image-url.jpg'); */
-    background-size: cover;
-    background-position: center;
-    height: 400px;
+:root {
+    --bg-color: rgb(200, 255, 255);
+    --second-bg-color: #146C94;
+    --text-color:#19A7CE;
+    --main-color: #000000;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: #000000;
+}
+section {
+    min-height: 100vh;
+    padding: 10rem 9% 2rem;
+}
+
+/** HEADER */
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 9%;
+    background: var(--text-color);
     display: flex;
-    flex-direction: column;
+    justify-content:space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--main-color);
+    cursor: default;
+}
+
+.navBar a {
+    font-size: 1.8rem;
+    color: var(--bg-color);
+    margin-left: 4rem;
+    transition: 1s ease;
+
+}
+
+.navBar a:hover, .navBar a.active {
+    color: var(--second-bg-color);
+}
+svg#menuIcon {
+    font-size: 3.6rem;
+    color: var(--bg-color);
+    display: none;
+}
+
+/* HOME */
+
+.home {
+    display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center;
-    color: black;
-  }
-  
-  .hero-banner h1 {
-    font-size: 48px;
-    margin-bottom: 20px;
-  }
-  
-  .hero-banner p {
-    font-size: 24px;
-    margin-bottom: 40px;
-  }
-  
-  .btn {
-    background-color: #fff;
-    color: #000;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: all 0.3s ease;
-  }
-  
-  .btn:hover {
-    background-color: #000;
-    color: #fff;
-  }
-  
+    /* background-image:url("../img/scott-graham-.jpg");
+    background-size:100%;
+    background-repeat: no-repeat;
+    background-position: center; */
+}
+
+.homeContent h3 {
+    font-size: 3.6rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+.homeContent p {
+    font-size: 1.6rem;
+}
+.socialMedia a img {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    border: .3rem solid var(--main-color);
+    background: transparent;
+    border-radius: 50%;
+    font-size: 2rem;
+    color: var(--second-bg-color);
+    margin: 3rem 1.5rem 3rem 0;
+    transition: 0.5s ease;
+
+}
+.socialMedia a img:hover {
+    background-color: var(--text-color);
+    color: var(--main-color);
+    box-shadow: 0 0 1rem;
+}
+.homeImg img {
+    width: 24vw;
+}
+
+.btn {
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background-color: var(--text-color);
+    font-size: 1.6rem;
+    border-radius: 4rem;
+    color: var(--main-color);
+    letter-spacing: .1rem;
+    font-weight: 600;
+    transition: 0.5s ease;
+}
+.btn:hover {
+    background-color: var(--second-bg-color);
+    box-shadow: 0 0 1rem;
+}
