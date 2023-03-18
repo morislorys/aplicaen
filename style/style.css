@@ -57,6 +57,7 @@ section {
     color: var(--bg-color);
     margin-left: 4rem;
     transition: 1s ease;
+    cursor: pointer;
 
 }
 
