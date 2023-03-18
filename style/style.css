@@ -157,7 +157,7 @@ svg#menuIcon {
     flex: 1 1 30rem;
     background-color: var(--third-color);
     padding: 3rem 2rem 4rem;
-
+    max-width: 395px;
     text-align: center;
     border: .2rem var(--first-color);
     border-radius: 2rem;
@@ -350,20 +350,50 @@ div.memberCard {
 
 /* Break points*/
 
-@media (max-width: 1200px){
-    html {
-        font-size: 55%;
-    }
-}
 @media (max-width: 991px){
-    .header {
-        padding: 2rem 3%
-    }
     section {
         padding: 10rem 3% 2rem;
     }
     .footer  {
         padding: 2rem 3%;
     }
+}
+@media (max-width: 1300px) {
+    html {
+        font-size: 55%;
+    }
+    svg#menuIcon {
+        display: block;
+    }
+    .navBar {
+        position: absolute;
+        top:100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem 3%;
+        /* border-top: .1rem solid red; */
+        background-color: var(--second-color);
+        box-shadow: 0 .5rem 1rem solid var(--second-color);
+        display: none;
+    }
+    .close {
+        display: block;
+        
+    }
+    .navBar a {
+        display: block;
+        font-size: 1.8rem;
+        margin: 3rem 0 ;
+    }
+    .home {
+        
+        flex-direction: column;
+    }
+    .homeContent h3 {
+        font-size: 5rem;
+    }
+    .homeImg img {
+        height: 45%;
+    }  
 }
 
