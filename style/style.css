@@ -11,10 +11,14 @@
 }
 
 :root {
-    --bg-color: rgb(200, 255, 255);
+    --bg-color: #FFFFFF ;
     --second-bg-color: #146C94;
     --text-color:#19A7CE;
     --main-color: #000000;
+
+    --first-color: #D81E5C;
+    --second-color: #2C3D55;
+    --third-color: #7E4F9A;
 }
 
 html {
@@ -39,7 +43,7 @@ section {
     left: 0;
     width: 100%;
     padding: 2rem 9%;
-    background: var(--text-color);
+    background: var(--third-color);
     display: flex;
     justify-content:space-between;
     align-items: center;
@@ -53,7 +57,7 @@ section {
 }
 
 .navBar a {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     color: var(--bg-color);
     margin-left: 4rem;
     transition: 1s ease;
@@ -117,15 +121,158 @@ svg#menuIcon {
 .btn {
     display: inline-block;
     padding: 1rem 2.8rem;
-    background-color: var(--text-color);
+    background-color: var(--third-color);
     font-size: 1.6rem;
     border-radius: 4rem;
     color: var(--main-color);
     letter-spacing: .1rem;
     font-weight: 600;
     transition: 0.5s ease;
+    box-shadow: 0 0 1rem var(--third-color);
 }
 .btn:hover {
     background-color: var(--second-bg-color);
     box-shadow: 0 0 1rem;
 }
+
+/* Services */
+.heading {
+    text-align: center;
+    font-size: 4.5rem;
+}
+.services  h2 {
+    margin-bottom: 5rem;
+
+}
+.serviceContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+.serviceContainer .serviceCard {
+    flex: 1 1 30rem;
+    background-color: var(--third-color);
+    padding: 3rem 2rem 4rem;
+
+    text-align: center;
+    border: .2rem var(--first-color);
+    border-radius: 2rem;
+    transition: .5s ease;
+}
+.serviceContainer .serviceCard:hover {
+    border: .1rem solid var(--second-bg-color);
+    transform: scale(1.02);
+}
+
+.serviceCard img {
+    font-size: 7rem;
+}
+.serviceCard h3 {
+    font-size: 2.6rem;
+}
+.serviceCard p {
+    font-size: 1.6rem;
+    margin: 1rem 0 3rem;
+}
+
+
+/*EQUIPE*/
+section.equipe h2{
+    margin-bottom: 5rem;
+}
+
+.memberContainer .memberCardTrack{
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 2rem;
+}
+div.memberCard {
+    width: 200px;
+    background-color: var(--third-color);
+    border-radius: 2rem;
+    display: grid;
+    grid-template-rows: 3fr 1fr;
+    transition: 0.55s ease-in;
+    border:2px solid #146C94;
+}
+.memberCard:hover {
+    opacity: 0.5;
+    transform: scale(1.06);
+}
+.memberCard img {
+
+ width :200px ;
+    height : 200px; 
+    border-top-right-radius: 2rem;
+    border-top-left-radius: 2rem;
+    margin-bottom: 1rem;
+}
+
+.memberCardContainer {
+    text-align: left;
+    padding-left: 1.2rem;
+    
+}
+.memberCardContainer h4 {
+    font-size: 1.8rem;
+    
+}
+.memberCardContainer div {
+    font-size: 1.3rem;
+}
+
+
+/* Header carrousel*/
+@-webkit-keyframes scroll {
+    0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    }
+    100% {
+    -webkit-transform: translateX(calc(-200px * 4));
+    transform: translateX(calc(-200px * 4));
+    }
+    }
+    @keyframes scroll {
+    0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    }
+    100% {
+    -webkit-transform: translateX(calc(-200px * 4));
+    transform: translateX(calc(-200px * 4));
+    }
+}
+.memberContainer {
+    box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    width: 800px;
+    }
+    .memberContainer::before, .memberContainer::after {
+    background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%);
+    content: "";
+    height: 110%;
+    position: absolute;
+    width: 50px;
+    z-index: 2;
+    }
+    .memberContainer::after {
+    right: 0;
+    top: 0;
+    -webkit-transform: rotateZ(180deg);
+    transform: rotateZ(180deg);
+    }
+    .memberContainer::before {
+    left: 0;
+    top: 0;
+    }
+    .memberContainer .memberCardTrack {
+    -webkit-animation: scroll 20s linear infinite;
+    animation: scroll 20s linear infinite;
+    display: flex;
+    width: calc(200px * 7);
+    }
