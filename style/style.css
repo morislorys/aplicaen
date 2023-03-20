@@ -71,9 +71,7 @@ section {
 .navBar a:hover, .navBar a.active {
     color: var(--second-bg-color);
 }
-svg#menuIcon {
-    font-size: 3.6rem;
-    color: var(--bg-color);
+#menuIcon {
     display: none;
 }
 
@@ -182,6 +180,11 @@ svg#menuIcon {
 
 
 /*EQUIPE*/
+section.equipe#equipe {
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+}
 section.equipe h2{
     margin-bottom: 5rem;
 }
@@ -252,16 +255,19 @@ div.memberCard {
 .memberContainer {
     box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
     margin: auto;
-    overflow: hidden;
+    overflow: hidden;        
     position: relative;
-    width: 900px;
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    margin-inline: auto;
     }
     .memberContainer::before, .memberContainer::after {
     background: linear-gradient(to right, var(--second-color) 0%, rgba(255, 255, 255, 0) 100%);
     content: "";
     height: 120%;
     position: absolute;
-    width: 50px;
+    width: 10px;
     z-index: 2;
     }
     .memberContainer::after {
@@ -275,10 +281,11 @@ div.memberCard {
     top: 0;
     }
     .memberContainer .memberCardTrack {
+    width: 100%;
     -webkit-animation: scroll 20s linear infinite;
     animation: scroll 20s linear infinite;
     display: flex;
-    width: calc(200px * 7);
+    /* width: calc(200px * 7); */
     }
 
 
@@ -367,7 +374,7 @@ div.memberCard {
     html {
         font-size: 55%;
     }
-    svg#menuIcon {
+    #menuIcon {
         display: block;
     }
     .navBar {
