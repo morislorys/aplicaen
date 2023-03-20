@@ -80,6 +80,11 @@ h1 {
 .arrowicon {
   width: 25px;
 }
+section h2 {
+  text-align: center;
+  font-size: 6rem;
+  color: #000000;
+}
 
 /** HEADER */
 
@@ -126,12 +131,14 @@ h1 {
   background-image: url("../img/bg.png");
   background-size: 100%;
   backdrop-filter: var(--second-bg-color);
+  /* background-image:url("../img/scott-graham-.jpg"); */
   background-repeat: no-repeat;
   background-attachment: fixed;
   /* background-image:url("../img/scott-graham-.jpg");
   background-size:100%;
   background-repeat: no-repeat;
-  background-position: center; */
+  background-position: center;
+  background-attachment: fixed;*/
 }
 
 .homeContent {
@@ -191,7 +198,7 @@ h1 {
 @keyframes bounce{
      from {transform: translateY(0);}
      to   {transform: translateY(-5px);}
-}
+} */
 
 /* Services */
 .heading {
@@ -239,13 +246,17 @@ h1 {
 
 
 /*EQUIPE*/
+section.equipe {
+  width: 100%;
+}
 section.equipe h2{
   margin-bottom: 5rem;
-}
+  
 
+}
 .memberContainer .memberCardTrack{
-  /* display: flex;
-  flex-wrap: nowrap; */
+  display: flex;
+  /*flex-wrap: nowrap; */
   padding: 2rem;
   gap: 2rem;
 }
@@ -263,8 +274,7 @@ div.memberCard {
   transform: scale(1.06);
 }
 .memberCard img {
-
-width :200px ;
+  width :200px ;
   height : 200px; 
   border-top-right-radius: 2rem;
   border-top-left-radius: 2rem;
@@ -284,34 +294,12 @@ width :200px ;
   font-size: 1.3rem;
 }
 
-
-/* Header carrousel*/
-@-webkit-keyframes scroll {
-  0% {
-  -webkit-transform: translateX(0);
-  transform: translateX(0);
-  }
-  100% {
-  -webkit-transform: translateX(calc(-200px * 4));
-  transform: translateX(calc(-200px * 4));
-  }
-  }
-  @keyframes scroll {
-  0% {
-  -webkit-transform: translateX(0);
-  transform: translateX(0);
-  }
-  100% {
-  -webkit-transform: translateX(calc(-200px * 4));
-  transform: translateX(calc(-200px * 4));
-  }
-}
 .memberContainer {
-  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
   margin: auto;
   overflow: hidden;
   position: relative;
-  width: 900px;
+  display: flex;
+  width: calc(7 * 212px);
   }
   .memberContainer::before, .memberContainer::after {
   background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%);
@@ -332,10 +320,9 @@ width :200px ;
   top: 0;
   }
   .memberContainer .memberCardTrack {
-  -webkit-animation: scroll 20s linear infinite;
-  animation: scroll 20s linear infinite;
   display: flex;
-  width: calc(200px * 7);
+  width: calc(7 * 212px);
+  position: relative;
   }
 
 
@@ -386,6 +373,7 @@ width :200px ;
   flex-wrap: wrap;
   padding: 1rem 9%;
   background-color: var(--second-color);
+  
 }
 
 .footerText {
@@ -402,6 +390,23 @@ width :200px ;
 .footerIconTop a:hover {
   box-shadow: 0 0 1rem var(--text-color);
 }
+
+div.adresse  ul, div.footerSocialLinks ul {
+  list-style-type: none;
+}
+div.footerSocialLinks ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+div.footerSocialLinks ul li img {
+  border-radius: 50%;
+  border: 0.3rem solid black;
+  width: 3rem;
+  height: 3rem;
+}
+
 
 
 /* MEDIA QUERRIES*/
