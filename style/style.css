@@ -11,7 +11,7 @@
 }
 
 :root {
-    --bg-color: #FFFFFF ;
+    --header-color: #FFFFFF ;
     --second-bg-color: #146C94;
     --text-color:#19A7CE;
     --main-color: #000000;
@@ -28,7 +28,7 @@ html {
 }
 
 body {
-    background-color: var(--bg-color);
+    background-color: var(--second-color);
     color: #000000;
 }
 section {
@@ -43,8 +43,9 @@ section {
     top: 0;
     left: 0;
     width: 100%;
+    max-height: 5rem;
     padding: 2rem 9%;
-    background: var(--third-color);
+    background: var(--header-color);
     display: flex;
     justify-content:space-between;
     align-items: center;
@@ -54,7 +55,7 @@ section {
 .logo {
     font-size: 2.5rem;
     font-weight: 700;
-    color: var(--main-color);
+    color: var(--second-color);
     cursor: default;
 }
 
@@ -62,7 +63,7 @@ section {
     font-size: 1.5rem;
     color: var(--bg-color);
     margin-left: 4rem;
-    transition: 1s ease;
+    transition: 0.3s ease-out;
     cursor: pointer;
 
 }
@@ -108,13 +109,13 @@ svg#menuIcon {
     font-size: 2rem;
     color: var(--second-bg-color);
     margin: 3rem 1.5rem 3rem 0;
-    transition: 0.5s ease;
+    transition: 0.3s ease-out;
 
 }
 .socialMedia a img:hover {
-    background-color: var(--text-color);
-    color: var(--main-color);
-    box-shadow: 0 0 1rem;
+    background-color: var(--third-color);
+    color: var(--third-color);
+    box-shadow: 0 0 1rem var(--third-color);
 }
 .homeImg img {
     width: 24vw;
@@ -123,14 +124,14 @@ svg#menuIcon {
 .btn {
     display: inline-block;
     padding: 1rem 2.8rem;
-    background-color: var(--third-color);
+    background-color: var(--second-bg-color);
     font-size: 1.6rem;
     border-radius: 4rem;
     color: var(--main-color);
     letter-spacing: .1rem;
     font-weight: 600;
-    transition: 0.5s ease;
-    box-shadow: 0 0 1rem var(--third-color);
+    transition: 0.3s ease-out;
+    box-shadow: 0 0 1rem var(--second-bg-color);
 }
 .btn:hover {
     background-color: var(--second-bg-color);
@@ -161,7 +162,7 @@ svg#menuIcon {
     text-align: center;
     border: .2rem var(--first-color);
     border-radius: 2rem;
-    transition: .5s ease;
+    transition: 0.3s ease-out;
 }
 .serviceContainer .serviceCard:hover {
     border: .1rem solid var(--second-bg-color);
@@ -197,7 +198,7 @@ div.memberCard {
     border-radius: 2rem;
     display: grid;
     grid-template-rows: 3fr 1fr;
-    transition: 0.55s ease-in;
+    transition: 0.3s ease-out;
     border:2px solid #146C94;
 }
 .memberCard:hover {
@@ -206,7 +207,7 @@ div.memberCard {
 }
 .memberCard img {
 
- width :200px ;
+    width :200px ;
     height : 200px; 
     border-top-right-radius: 2rem;
     border-top-left-radius: 2rem;
@@ -256,9 +257,9 @@ div.memberCard {
     width: 900px;
     }
     .memberContainer::before, .memberContainer::after {
-    background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%);
+    background: linear-gradient(to right, var(--second-color) 0%, rgba(255, 255, 255, 0) 100%);
     content: "";
-    height: 110%;
+    height: 120%;
     position: absolute;
     width: 50px;
     z-index: 2;
@@ -339,7 +340,7 @@ div.memberCard {
     align-items: center;
     padding: .8rem;
     border-radius: .8rem;
-    transition: ease;
+    transition: 0.3 ease-out;
 } 
 .footerIconTop a:hover {
     box-shadow: 0 0 1rem var(--text-color);
@@ -350,12 +351,16 @@ div.memberCard {
 
 /* Break points*/
 
-@media (max-width: 991px){
+@media (max-width: 400px){
     section {
         padding: 10rem 3% 2rem;
     }
     .footer  {
         padding: 2rem 3%;
+    }
+    .memberContainer {
+        width: calc(100% - 2rem);
+        margin-inline: auto;
     }
 }
 @media (max-width: 1300px) {
