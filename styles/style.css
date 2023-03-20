@@ -20,6 +20,15 @@
   --second-color: #2C3D55;
   --third-color: #7E4F9A;
 }
+/** CHANGE COLOR OF HIGHLIGHT **/
+::-moz-selection{
+  background-color : var(--first-color);
+  color : #fff
+}
+::selection{
+  background-color: var(--first-color);
+  color : #fff
+}
 
 html {
   font-size: 62.5%;
@@ -33,7 +42,14 @@ body {
 }
 section {
   min-height: 100vh;
-  padding: 10rem 9% 2rem;
+  padding: 0;
+}
+
+h1 {
+  font-size: 88px;
+  color: var(--second-color);
+  display: flex;
+  justify-content: center;
 }
 
 /** UP BUTTON **/
@@ -157,18 +173,24 @@ section {
 .btn {
   display: inline-block;
   padding: 1rem 2.8rem;
-  background-color: var(--third-color);
+  background-color: var(--bg-color);
   font-size: 1.6rem;
   border-radius: 4rem;
   color: var(--main-color);
   letter-spacing: .1rem;
   font-weight: 600;
   transition: 0.3s ease;
-  box-shadow: 0 0 1rem var(--third-color);
+  opacity: 0.8;
 }
 .btn:hover {
-  background-color: var(--second-bg-color);
-  box-shadow: 0 0 1rem;
+  opacity: 1;
+  transform: scale(1.4);
+  animation: bounce 0.35s ease infinite alternate;
+}
+
+@keyframes bounce{
+     from {transform: translateY(0);}
+     to   {transform: translateY(-5px);}
 }
 
 /* Services */
@@ -178,27 +200,30 @@ section {
 }
 .services  h2 {
   margin-bottom: 5rem;
-
 }
+
+.services img {
+  filter: invert(1);
+}
+
 .serviceContainer {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  gap: 2rem;
+  gap: 0.1rem;
+  width: 100%;
 }
 .serviceContainer .serviceCard {
   flex: 1 1 30rem;
   background-color: var(--second-color);
   padding: 3rem 2rem 4rem;
-  max-width: 395px;
   text-align: center;
-  border-radius: 2rem;
   transition: 0.3s ease-out;
 }
+
 .serviceContainer .serviceCard:hover {
-  border: .1rem solid var(--second-bg-color);
-  transform: scale(1.02);
+  transition-duration: 0.5s;
 }
 
 .serviceCard img {
