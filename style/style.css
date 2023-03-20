@@ -81,10 +81,11 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* background-image:url("../img/scott-graham-.jpg");
+    /*  background-image:url("../img/scott-graham-.jpg");
     background-size:100%;
     background-repeat: no-repeat;
-    background-position: center; */
+    background-position: center;
+    background-attachment: fixed */;
 }
 
 .homeContent h3 {
@@ -336,6 +337,7 @@ div.memberCard {
     flex-wrap: wrap;
     padding: 1rem 9%;
     background-color: var(--second-color);
+    list-style-type: none;
 }
 
 .footerText {
