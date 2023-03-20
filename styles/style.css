@@ -36,6 +36,35 @@ section {
   padding: 10rem 9% 2rem;
 }
 
+/** UP BUTTON **/
+.upbtn {
+  height: 50px;
+  width: 50px;
+  background-color: rgba(44, 61, 85, 0.1);
+  border-radius: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  cursor: pointer;
+}
+
+.upbtn:hover {
+  background-color: rgba(44, 61, 85, 0.5);
+  transition: ease-out;
+  transition-duration: 0.2s;
+}
+
+.arrowicon {
+  opacity: 1;
+}
+
+.arrowicon {
+  width: 25px;
+}
+
 /** HEADER */
 
 .header {
@@ -66,7 +95,7 @@ section {
 
 }
 
-.navBar a:hover, .navBar a.active {
+.navBar a:hover {
   color: var(--first-color);
 }
 
@@ -81,6 +110,8 @@ section {
   background-image: url("../img/bg.png");
   background-size: 100%;
   backdrop-filter: var(--second-bg-color);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   /* background-image:url("../img/scott-graham-.jpg");
   background-size:100%;
   background-repeat: no-repeat;
@@ -158,11 +189,10 @@ section {
 }
 .serviceContainer .serviceCard {
   flex: 1 1 30rem;
-  background-color: var(--third-color);
+  background-color: var(--second-color);
   padding: 3rem 2rem 4rem;
   max-width: 395px;
   text-align: center;
-  border: .2rem var(--first-color);
   border-radius: 2rem;
   transition: 0.3s ease-out;
 }
