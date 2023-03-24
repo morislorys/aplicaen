@@ -31,7 +31,7 @@ function carousel() {
     function clone(){
         carourselCardTrack2 = carourselCardTrack.cloneNode(true);
         carouselContainer.appendChild(carourselCardTrack2);
-        carourselCardTrack2.style.left = `$(width)px`;
+        carourselCardTrack2.style.left = `${width}px`;
     }
     function moveFirst() {
         x -=speed;

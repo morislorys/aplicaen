@@ -423,7 +423,10 @@ div.footerSocialLinks ul li img {
   width: 3rem;
   height: 3rem;
 }
-
+div.footerSocialLinks ul li img:hover {
+  transform: scale(1.4);
+  animation: bounce 0.35s ease infinite alternate;
+}
 
 
 /* MEDIA QUERRIES*/
