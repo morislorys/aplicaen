@@ -16,7 +16,7 @@ menuIcon.onclick = () => {
 
 
 /* CARDS ANIMATION*/
-
+/*
 function carousel() {
     let carouselContainer = document.querySelector(".memberContainer");
     let carourselCardTrack = document.querySelector(".memberCardTrack");
@@ -56,7 +56,7 @@ function carousel() {
     let b = setInterval(moveSecond, 10);  
 } 
 carousel()
-
+*/
 /* */
 
 let sections = document.querySelectorAll('section');
