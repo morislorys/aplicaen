@@ -16,7 +16,7 @@ menuIcon.onclick = () => {
 
 
 /* CARDS ANIMATION*/
-
+/*
 function carousel() {
     let carouselContainer = document.querySelector(".memberContainer");
     let carourselCardTrack = document.querySelector(".memberCardTrack");
@@ -56,7 +56,7 @@ function carousel() {
     let b = setInterval(moveSecond, 10);  
 } 
 carousel()
-
+*/
 /* */
 
 let sections = document.querySelectorAll('section');
@@ -81,3 +81,13 @@ window.onscroll = () => {
     menuIcon.src = "../img/menu-regular-24.png";
     toggleState = 0;
 };  */
+
+function scrollToSection(sectionId) {
+    const section = document.getElementById(sectionId);
+    const offset = -100; // décalage de 100px vers le haut
+  
+    window.scrollTo({
+      top: section.offsetTop + offset,
+      behavior: 'smooth', // animation fluide
+    });
+  }  

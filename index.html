@@ -13,12 +13,12 @@
   <header class="header">
     <img id="logo" src="./img/logoEML.png" alt="">
     <nav class="navBar">
-      <a href="#home" class="active">Accueil</a>
-      <a href="#services">Services</a>
-      <a href="#equipe">Equipe</a>
+      <a href="#home">Accueil</a>
+      <a onclick="scrollToSection('services')">Services</a>
+      <a onclick="scrollToSection('equipe')">Equipe</a>
       <a href="#faq">FAQ</a>
-      <a href="#contact">Demander un devis</a>
-      <a href="#contact">Espace adhérents</a>
+      <a onclick="scrollToSection('contact')">Demander un devis</a>
+      <a href="https://junior-connect.com/login/aplicaen">Espace adhérents</a>
     </nav>
   </header>
   <a href="#" class="upbtn">
@@ -27,27 +27,33 @@
   <section id="home" class="home">
     <div class="homeContent">
       <h3>EML - Ensicaen Mission Lab </h3>
-      <p> EML est le bureau d'étude de l'ENSICAEN. Plus de 700 élèves-ingénieurs proposent leurs compétences pour aider les entreprises et les laboratoires dans leurs projets via 15 prestations classiques, et plus à la demande.</p>
-
+      <p>
+        Bienvenue chez Elèves Entrepreneurs, le service d'Aplicaen proposé par plus de 700 élèves-ingénieurs de l'ENSICAEN. Nous mettons à votre disposition nos compétences pour aider les entreprises et les laboratoires à mener à bien leurs projets, grâce à une quinzaine de prestations classiques, et plus encore à la demande.
+      <br><br>
+        Si vous êtes à la recherche d'un logiciel répondant à des fonctionnalités précises mais que rien ne convient sur le marché, les élèves de l'ENSICAEN peuvent développer une solution sur mesure qui répondra parfaitement à vos besoins. Quel que soit le langage préférentiel ou le framework imposé, nous avons la flexibilité nécessaire pour nous adapter à vos contraintes et développer une solution sur mesure qui répondra à vos attentes.
+      <br><br>
+        Nous pouvons également tester la résistance de divers matériaux face à des contraintes mécaniques, thermiques et autres qui correspondent à l'usage réel de votre produit. Nos tests peuvent être réalisés physiquement en laboratoire, ou par simulation, tout en prenant en compte la forme donnée au produit.
+      <br><br>
+        Si vous développez un produit nécessitant une carte électronique analogique, les élèves de l'ENSICAEN peuvent créer un prototype fonctionnel de cette carte. Ce prototype peut être utilisé comme base de travail par vos équipes R&D, vous permettant ainsi de vous décharger d'une partie du travail pour vous concentrer sur l'essentiel : l'innovation. Nous utilisons les retours de vos équipes pour améliorer le prototype à chaque étape de votre projet.
+      </p>
     </div>
   </section>
   <section id="services" class="services">
-    <h2 class="heading">Nos Services.</h2>
     <div class="serviceContainer">
       <div class="serviceCard">
-        <img src="./img/icons8-computer-science-68.png" alt="" class="serviceLogo">
+        <img src="./img/img_info.svg" alt="" height="100" width="100" class="serviceLogo">
         <h3 class="seviceName">Informatique</h3>
         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum perspiciatis sed optio quisquam porro beatae aspernatur ullam? Iste perspiciatis accusamus sunt? Exercitationem pariatur perferendis qui similique labore nemo est iusto?</p>
         <a href="" class="btn">Plus...</a>
       </div>
       <div class="serviceCard">
-        <img src="./img/icons8-microchip-68.png" alt="" class="serviceLogo">
+        <img src="./img/img_elec.svg" alt="" height="100" width="100" class="serviceLogo">
         <h3 class="seviceName">Electronique</h3>
         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum perspiciatis sed optio quisquam porro beatae aspernatur ullam? Iste perspiciatis accusamus sunt? Exercitationem pariatur perferendis qui similique labore nemo est iusto?</p>
         <a href="" class="btn">Plus...</a>
       </div>
       <div class="serviceCard">
-        <img src="./img/icons8-test-tube-68.png" alt="" class="serviceLogo">
+        <img src="./img/img_chimie.svg" alt="" height="100" width="100" class="serviceLogo">
         <h3 class="seviceName">Chimie</h3>
         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum perspiciatis sed optio quisquam porro beatae aspernatur ullam? Iste perspiciatis accusamus sunt? Exercitationem pariatur perferendis qui similique labore nemo est iusto?</p>
         <a href="" class="btn">Plus...</a>
@@ -56,53 +62,52 @@
   </section>
 
   <section class="equipe" id="equipe" >
-    <h2 class="heading">Notre Equipe.</h2>
     <div class="memberContainer">
       <div class="memberCardTrack">
       <div class="memberCard">
-        <img src="./img/dog-7630252_640.jpg" alt="">
+        <img src="./img/human.png" alt="">
         <div class="memberCardContainer">
           <h4>Guillain</h4>
           <div>Président.</div>
         </div>
       </div>
       <div class="memberCard">
-        <img src="./img/dog-7630252_640.jpg" alt="">
+        <img src="./img/human.png" alt="">
         <div class="memberCardContainer">
           <h4>Jérome</h4>
           <div>Vice-président.</div>
         </div>
       </div>
       <div class="memberCard">
-        <img src="./img/dog-7630252_640.jpg" alt="">
+        <img src="./img/human.png" alt="">
         <div class="memberCardContainer">
           <h4>Moris</h4>
           <div>Pôle DSI.</div>
         </div>
       </div>
       <div class="memberCard">
-        <img src="./img/dog-7630252_640.jpg" alt="">
+        <img src="./img/human.png" alt="">
         <div class="memberCardContainer">
           <h4>Paul</h4>
           <div>Chargé d'affaire.</div>
         </div>
       </div>
       <div class="memberCard">
-        <img src="./img/dog-7630252_640.jpg" alt="">
+        <img src="./img/human.png" alt="">
         <div class="memberCardContainer">
           <h4>Imane</h4>
           <div>Trésorière.</div>
         </div>
       </div>
       <div class="memberCard">
-        <img src="./img/dog-7630252_640.jpg" alt="">
+        <img src="./img/human.png" alt="">
         <div class="memberCardContainer">
           <h4>Winnie</h4>
           <div>Sécrétaire</div>
         </div>
       </div>
       <div class="memberCard">
-        <img src="./img/dog-7630252_640.jpg" alt="">
+        <img src="./img/human.png" alt="">
         <div class="memberCardContainer">
           <h4>Nour</h4>
           <div>Pôle Communication</div>
@@ -116,21 +121,28 @@
     <h2 class="heading">Contactez Nous!</h2>
     <form action="#">
       <div class="inputBox">
-        <input type="text" name="Full name" placeholder="Full name" id="">
-        <input type="email" name="Email Addddress" placeholder="Email Addddress" id="">
+        <input type="text" name="Full name" placeholder="Nom*" id="">
+        <input type="email" name="Email Addddress" placeholder="Prénom*" id="">
       </div>
       <div class="inputBox">
-        <input type="nummber" name="Mobile Number" placeholder="Mobile Number" id="">
-        <input type="text" name="Email subject" placeholder="Email subject" id="">
+        <input type="number" name="Mobile Number" placeholder="Email*" id="">
+        <input type="text" name="Email subject" placeholder="Numéro de téléphone" id="">
       </div>
-      <textarea name="" id="" cols="30" rows="10"  placeholder="Bonjour..."></textarea>
+      <div class="inputBox">
+        <input type="number" name="Mobile Number" placeholder="Société" id="">
+        <input type="text" name="Email subject" placeholder="Objet" id="">
+      </div>
+      <textarea name="" id="" cols="30" rows="10"  placeholder="Bonjour...*"></textarea>
+      <div class="inputBox">
+        <input type="file" name="Pièce jointe" placeholder="Société" id="">
+      </div>
       <input type="submit" value="Envoyer" class="btn">
     </form>
   </section>
 
   <footer class="footer">
     <div class="footerText">
-      <p>Copyright &copy; 2023 by Orys</p>
+      <p>Copyright &copy; 2023 by Orys, Guillain</p>
     </div>
     <div class="adresse">
       <ul>
