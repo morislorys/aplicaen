@@ -34,6 +34,7 @@
 html {
   font-size: 62.5%;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -93,6 +94,7 @@ section h2 {
   top: 0;
   left: 0;
   width: 100%;
+  height: 100px;
   padding-right: 5%;
   padding-left: 2%;
   padding-top: 0.5%;
@@ -142,12 +144,17 @@ section h2 {
   min-height: 100vh;
 }
 
+#anchor{
+  padding-top: -100px;
+  margin-top: 100px;
+}
+
 .homeContent {
   width: 75%;
   background-color: rgba(29,43,109,0.7);
   padding: 1%;
   border-radius: 15px;
-  box-shadow: white 0px 0px 3px 0px;
+  box-shadow: black 0px 0px 3px 0px;
 }
 
 .homeContent h3 {
@@ -272,7 +279,6 @@ section.home div h3, section.home div p {
 /*EQUIPE*/
 section.equipe {
   background-color: var(--my-blue);
-  margin-bottom: 150px;
 }
 
 .memberContainer .memberCardTrack{
@@ -358,6 +364,7 @@ div.memberCard {
 
 /* Contact**/
 .contact {
+  padding-top: 150px;
   margin-bottom: 150px;
 }
 
@@ -414,7 +421,7 @@ input::placeholder,textarea::placeholder {
   flex-wrap: wrap;
   padding: 1rem 9%;
   background-color: var(--second-color);
-  
+  height: 200px;
 }
 
 .footerText {
@@ -434,6 +441,7 @@ input::placeholder,textarea::placeholder {
 
 div.adresse  ul, div.footerSocialLinks ul {
   list-style-type: none;
+  font-size: 15px;
 }
 div.footerSocialLinks ul {
   display: flex;

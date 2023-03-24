@@ -13,11 +13,11 @@
   <header class="header">
     <img id="logo" src="./img/logoEML.png" alt="">
     <nav class="navBar">
-      <a href="#home" class="active">Accueil</a>
-      <a href="#services">Services</a>
-      <a href="#equipe">Equipe</a>
+      <a href="#home">Accueil</a>
+      <a onclick="scrollToSection('services')">Services</a>
+      <a onclick="scrollToSection('equipe')">Equipe</a>
       <a href="#faq">FAQ</a>
-      <a href="#contact">Demander un devis</a>
+      <a onclick="scrollToSection('contact')">Demander un devis</a>
       <a href="https://junior-connect.com/login/aplicaen">Espace adhérents</a>
     </nav>
   </header>
@@ -121,14 +121,21 @@
     <h2 class="heading">Contactez Nous!</h2>
     <form action="#">
       <div class="inputBox">
-        <input type="text" name="Full name" placeholder="Nom Prénom" id="">
-        <input type="email" name="Email Addddress" placeholder="Adresse mail" id="">
+        <input type="text" name="Full name" placeholder="Nom*" id="">
+        <input type="email" name="Email Addddress" placeholder="Prénom*" id="">
       </div>
       <div class="inputBox">
-        <input type="number" name="Mobile Number" placeholder="Numéro de téléphone" id="">
+        <input type="number" name="Mobile Number" placeholder="Email*" id="">
+        <input type="text" name="Email subject" placeholder="Numéro de téléphone" id="">
+      </div>
+      <div class="inputBox">
+        <input type="number" name="Mobile Number" placeholder="Société" id="">
         <input type="text" name="Email subject" placeholder="Objet" id="">
       </div>
-      <textarea name="" id="" cols="30" rows="10"  placeholder="Bonjour..."></textarea>
+      <textarea name="" id="" cols="30" rows="10"  placeholder="Bonjour...*"></textarea>
+      <div class="inputBox">
+        <input type="file" name="Pièce jointe" placeholder="Société" id="">
+      </div>
       <input type="submit" value="Envoyer" class="btn">
     </form>
   </section>

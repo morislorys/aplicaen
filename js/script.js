@@ -81,3 +81,13 @@ window.onscroll = () => {
     menuIcon.src = "../img/menu-regular-24.png";
     toggleState = 0;
 };  */
+
+function scrollToSection(sectionId) {
+    const section = document.getElementById(sectionId);
+    const offset = -100; // décalage de 100px vers le haut
+  
+    window.scrollTo({
+      top: section.offsetTop + offset,
+      behavior: 'smooth', // animation fluide
+    });
+  }  
