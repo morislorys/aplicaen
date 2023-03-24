@@ -412,6 +412,25 @@ input::placeholder,textarea::placeholder {
   cursor: pointer;
 }
 
+.contact input#file-input {
+  cursor: pointer;
+}
+
+.contact input::file-selector-button {
+  font-weight: bold;
+  color: white;
+  padding: 0.5rem;
+  background-color: var(--my-blue);
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.contact input::file-selector-button:hover {
+  background-color: var(--my-blue);
+  transition-duration: 0.3s;
+}
+
 /*Footer**/
 
 .footer {
