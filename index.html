@@ -11,8 +11,10 @@
 
 <body>
   <header class="header">
-    <img id="logo" src="./img/logoEML.png" alt="">
-    <nav class="navBar">
+    <a href="#">
+      <img id="logo" src="./img/logoEML.png" alt="">
+    </a>
+      <nav class="navBar">
       <a href="#home">Accueil</a>
       <a onclick="scrollToSection('services')">Services</a>
       <a onclick="scrollToSection('equipe')">Equipe</a>
@@ -26,36 +28,30 @@
   </a>
   <section id="home" class="home">
     <div class="homeContent">
-      <h3>EML - Ensicaen Mission Lab </h3>
-      <p>
-        Bienvenue chez Elèves Entrepreneurs, le service d'Aplicaen proposé par plus de 700 élèves-ingénieurs de l'ENSICAEN. Nous mettons à votre disposition nos compétences pour aider les entreprises et les laboratoires à mener à bien leurs projets, grâce à une quinzaine de prestations classiques, et plus encore à la demande.
-      <br><br>
-        Si vous êtes à la recherche d'un logiciel répondant à des fonctionnalités précises mais que rien ne convient sur le marché, les élèves de l'ENSICAEN peuvent développer une solution sur mesure qui répondra parfaitement à vos besoins. Quel que soit le langage préférentiel ou le framework imposé, nous avons la flexibilité nécessaire pour nous adapter à vos contraintes et développer une solution sur mesure qui répondra à vos attentes.
-      <br><br>
-        Nous pouvons également tester la résistance de divers matériaux face à des contraintes mécaniques, thermiques et autres qui correspondent à l'usage réel de votre produit. Nos tests peuvent être réalisés physiquement en laboratoire, ou par simulation, tout en prenant en compte la forme donnée au produit.
-      <br><br>
-        Si vous développez un produit nécessitant une carte électronique analogique, les élèves de l'ENSICAEN peuvent créer un prototype fonctionnel de cette carte. Ce prototype peut être utilisé comme base de travail par vos équipes R&D, vous permettant ainsi de vous décharger d'une partie du travail pour vous concentrer sur l'essentiel : l'innovation. Nous utilisons les retours de vos équipes pour améliorer le prototype à chaque étape de votre projet.
-      </p>
-    </div>
-  </section>
+      <center><h3>Un projet à réaliser ?<br>Les ingénieurs de demain sont prêts à le concrétiser !</h3></center>
+      </div>
+    <div>
+      <a href="" class="btn">Plaquette</a>
+    </div class="plaquette">
+    </section>
   <section id="services" class="services">
     <div class="serviceContainer">
       <div class="serviceCard">
         <img src="./img/img_info.svg" alt="" height="100" width="100" class="serviceLogo">
         <h3 class="seviceName">Informatique</h3>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum perspiciatis sed optio quisquam porro beatae aspernatur ullam? Iste perspiciatis accusamus sunt? Exercitationem pariatur perferendis qui similique labore nemo est iusto?</p>
+        <p>L'ENSICAEN est reconnue pour son expertise en informatique, et plus particulièrement dans les domaines de la cybersécurité, de l'intelligence artificielle.</p>
         <a href="" class="btn">Plus...</a>
       </div>
       <div class="serviceCard">
         <img src="./img/img_elec.svg" alt="" height="100" width="100" class="serviceLogo">
         <h3 class="seviceName">Electronique</h3>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum perspiciatis sed optio quisquam porro beatae aspernatur ullam? Iste perspiciatis accusamus sunt? Exercitationem pariatur perferendis qui similique labore nemo est iusto?</p>
+        <p>Faites-nous confiance pour la conception de vos systèmes électroniques, capteurs et circuits intégrés pour des solutions sur mesure.</p>
         <a href="" class="btn">Plus...</a>
       </div>
       <div class="serviceCard">
         <img src="./img/img_chimie.svg" alt="" height="100" width="100" class="serviceLogo">
         <h3 class="seviceName">Chimie</h3>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum perspiciatis sed optio quisquam porro beatae aspernatur ullam? Iste perspiciatis accusamus sunt? Exercitationem pariatur perferendis qui similique labore nemo est iusto?</p>
+        <p> Confiez-nous vos analyses de réactions ou vos étude de contraintes physique !<br><br><br></p>
         <a href="" class="btn">Plus...</a>
       </div>
     </div>
@@ -141,22 +137,25 @@
   </section>
 
   <footer class="footer">
-    <div class="footerText">
-      <p>Copyright &copy; 2023 by Orys, Guillain</p>
-    </div>
-    <div class="adresse">
+    <div class="adressFooter">
       <ul>
         <li>EML - Ensicaen Mission Lab</li>
         <li>Boulevard Maréchal Juin</li>
         <li>14000 - Caen</li>
+        <br>
+        <li>Copyright &copy; 2023 by Orys, Guillain</li>
       </ul>
+    </div>
+    <div class="contactFooter">
+      <p>Mentions légales</p>
+      <p>Plaquette</p>
+      <p>Numéro de téléphone</p>
     </div>
     <div class="footerSocialLinks">
       <ul>
-        <li id="mail"><a href=""><img src="./img/mail-send-regular-24.png" alt=""></a></li>
-        <li id="Linkedin"><a href=""><img src="./img/linkedin-logo-24.png" alt=""></a></li>
-        <li id="Twitter"><a href=""><img src="./img/twitter-logo-24.png" alt=""></a></li>
-        <li id="instagram" ><a href=""><img src="./img/instagram-logo-24.png" alt=""></a></li>
+        <li id="Linkedin"><a href=""><img src="./img/linkedin-rounded.svg" alt=""></a></li>
+        <li id="Instagram" ><a href=""><img src="./img/instagram-rounded.svg" alt=""></a></li>
+        <li id="Facebook" ><a href=""><img src="./img/facebook-rounded.svg" alt=""></a></li>
       </ul>
     </div>
   </footer>
