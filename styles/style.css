@@ -84,7 +84,7 @@ h1 {
 }
 section h2 {
   text-align: center;
-  font-size: 6rem;
+  font-size: 2rem;
   color: #000000;
 }
 
@@ -353,6 +353,7 @@ div.memberCard {
 /*FAQ */
 section.faq h2 {
   margin-bottom: 3rem;
+  color: var(--my-blue);
 }
 section.faq {
   color: black;
