@@ -43,7 +43,8 @@ body {
   background-size: cover;
 }
 section {
-  padding: 0;
+  margin-bottom: 2rem;
+  height: 100vh;
 }
 
 h1 {
@@ -360,12 +361,131 @@ div.memberCard {
   width: calc(7 * 212px);
   position: relative;
   }
+/*FAQ */
+section.faq h2 {
+  margin-bottom: 3rem;
+}
+section.faq {
+  color: black;
+  text-align: center;
+  width: calc(100% - 20rem);
+  margin-inline: auto;
+}
+div.fapCardContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+div.cardQuestionTracker {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-inline: auto;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  width: 50%;
+}
+div.cardQuestionTracker div.CardQuestion {
+  padding: 2rem;
+  border: .5rem solid black;
+  border-radius: 2rem;
+  background-color: var(--second-bg-color);
+  
+
+}
+div.cardQuestionTracker div.CardQuestion h3 {
+  font-size: 2rem;
+  margin-bottom: 2rem ;
+  border-bottom: .3rem solid black;
+}
+div.cardQuestionTracker div.CardQuestion p {
+  font-size: 1.5rem;
+}
+
+
+.carousel-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: transparent;
+  border: none;
+  font-size: 2rem;
+  color: #000;
+  cursor: pointer;
+  z-index: 1;
+  transition: all 0.2s ease;
+}
+
+.carousel-button:focus {
+  outline: none;
+}
+
+.carousel-button:hover {
+  color: #666;
+}
+
+.carousel-button--left {
+  left: 0;
+}
+
+.carousel-button--right {
+  right: 0;
+}
+
+.card-carousel {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  width: 200px;
+}
+
+.card {
+  flex: 0 0 auto;
+  width: 200px;
+  height: 400px;
+  margin-right: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  scroll-snap-align: start;
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 5px 5px 0 0;
+}
+
+.card-content {
+  padding: 20px;
+}
+
+.card-content h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.card-content p {
+  margin-top: 0;
+}
 
 
 /* Contact**/
 .contact {
   padding-top: 150px;
   margin-bottom: 150px;
+
 }
 
 .contact h2 {
@@ -443,7 +563,7 @@ div.adresse  ul, div.footerSocialLinks ul {
   list-style-type: none;
   font-size: 15px;
 }
-div.footerSocialLinks ul {
+div.footerSocialLinks ul { 
   display: flex;
   justify-content: center;
   align-items: center;

@@ -91,3 +91,114 @@ function scrollToSection(sectionId) {
       behavior: 'smooth', // animation fluide
     });
   }  
+
+
+
+  /* faq**/ 
+  const carousel = document.querySelector(".card-carousel");
+const cards = carousel.querySelectorAll(".card");
+const leftButton = document.querySelector(".carousel-button--left");
+const rightButton = document.querySelector(".carousel-button--right");
+
+let isDragging = false;
+let startPos = 0;
+let currentTranslate = 0;
+let prevTranslate = 0;
+let animationID;
+let currentIndex = 0;
+
+cards.forEach((card, index) => {
+  card.addEventListener("dragstart", (e) => e.preventDefault());
+
+  // Touch events
+  card.addEventListener("touchstart", touchStart(index));
+  card.addEventListener("touchend", touchEnd);
+  card.addEventListener("touchmove", touchMove);
+
+  // Mouse events
+  card.addEventListener("mousedown", touchStart(index));
+  card.addEventListener("mouseup", touchEnd);
+  card.addEventListener("mousemove", touchMove);
+  card.addEventListener("mouseleave", touchEnd);
+});
+
+// Disable context menu
+window.oncontextmenu = function (event) {
+  event.preventDefault();
+  event.stopPropagation();
+  return false;
+};
+
+function touchStart(index) {
+  return function (event) {
+    currentIndex = index;
+    startPos = getPositionX(event);
+    isDragging = true;
+
+    animationID = requestAnimationFrame(animation);
+    carousel.classList.add("grabbing");
+  };
+}
+
+function touchEnd() {
+  isDragging = false;
+  cancelAnimationFrame(animationID);
+
+  const movedBy = currentTranslate - prevTranslate;
+
+  if (movedBy < -100 && currentIndex < cards.length - 1) {
+    currentIndex += 1;
+  }
+
+  if (movedBy > 100 && currentIndex > 0) {
+    currentIndex -= 1;
+  }
+
+  setPositionByIndex();
+
+  carousel.classList.remove("grabbing");
+}
+
+function touchMove(event) {
+  if (isDragging) {
+    const currentPosition = getPositionX(event);
+    currentTranslate = prevTranslate + currentPosition - startPos;
+  }
+}
+
+function getPositionX(event) {
+  return event.type.includes("mouse") ? event.pageX : event.touches[0].clientX;
+}
+
+function animation() {
+  setSliderPosition();
+  if (isDragging) requestAnimationFrame(animation);
+}
+
+function setSliderPosition() {
+  carousel.style.transform = `translateX(${currentTranslate}px)`;
+}
+
+function setPositionByIndex() {
+  currentTranslate = currentIndex * -320;
+  prevTranslate = currentTranslate;
+  setSliderPosition();
+}
+
+// Button events
+rightButton.addEventListener("click", () => {
+  currentIndex++;
+  if (currentIndex > cards.length - 1) {
+    currentIndex = cards.length - 1;
+  }
+  setPositionByIndex();
+});
+
+leftButton.addEventListener("click", () => {
+  currentIndex--;
+  if (currentIndex < 0) {
+    currentIndex = 0;
+  }
+  setPositionByIndex();
+});
+
