@@ -82,6 +82,7 @@ window.onscroll = () => {
     toggleState = 0;
 };  */
 
+/* SCROLL TO SECTION */
 function scrollToSection(sectionId) {
     const section = document.getElementById(sectionId);
     const offset = -100; // décalage de 100px vers le haut
@@ -90,7 +91,42 @@ function scrollToSection(sectionId) {
       top: section.offsetTop + offset,
       behavior: 'smooth', // animation fluide
     });
-  }  
+  }
+
+/* CHANGE OPACITY OF HEADER WHEN SCROLL */
+var header = document.querySelector('.header');
+var origOffsetY = header.offsetTop;
+
+function onScroll() {
+  if (window.scrollY >= origOffsetY) {
+    header.classList.add('scrolled');
+  } else {
+    header.classList.remove('scrolled');
+  }
+  
+  if (window.scrollY <= 0) {
+    header.classList.remove('scrolled');
+  }
+}
+
+document.addEventListener('scroll', onScroll);
+
+
+const title = document.querySelector('h1');
+const txt = "PARIS"
+
+function typewriter(word, index){
+    if(index < word.length) {
+        setTimeout(() => {
+            title.innerHTML += `<span>${word[index]}</span>`
+            typewriter(txt, index + 1)
+        }, 300);
+    }
+}
+setTimeout(() => {
+    typewriter(txt, 0)
+}, 500);
+  
 
 
 
