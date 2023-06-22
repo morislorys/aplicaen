@@ -11,14 +11,15 @@
 
 <body>
   <header class="header">
-    <img id="logo" src="./img/logoEML.png" alt="">
-    <p>Ceci est un test</p>
-    <nav class="navBar">
-      <a href="#home" class="active">Accueil</a>
-      <a href="#services">Services</a>
-      <a href="#equipe">Equipe</a>
+    <a href="#">
+      <img id="logo" src="./img/logoEML.png" alt="">
+    </a>
+      <nav class="navBar">
+      <a href="#home">Accueil</a>
+      <a onclick="scrollToSection('services')">Services</a>
+      <a onclick="scrollToSection('equipe')">Equipe</a>
       <a href="#faq">FAQ</a>
-      <a href="#contact">Demander un devis</a>
+      <a onclick="scrollToSection('contact')">Demander un devis</a>
       <a href="https://junior-connect.com/login/aplicaen">Espace adhérents</a>
     </nav>
   </header>
@@ -27,83 +28,81 @@
   </a>
   <section id="home" class="home">
     <div class="homeContent">
-      <h3>EML - Ensicaen Mission Lab </h3>
-      <p> EML est le bureau d'étude de l'ENSICAEN. Plus de 700 élèves-ingénieurs proposent leurs compétences pour aider les entreprises et les laboratoires dans leurs projets via 15 prestations classiques, et plus à la demande.</p>
-
-    </div>
-  </section>
+      <center><h3>Un projet à réaliser ?<br>Les ingénieurs de demain sont prêts à le concrétiser !</h3></center>
+      </div>
+    <div>
+    </div class="plaquette">
+    </section>
   <section id="services" class="services">
-    <h2 class="heading">Nos Services.</h2>
     <div class="serviceContainer">
       <div class="serviceCard">
-        <img src="./img/icons8-computer-science-68.png" alt="" class="serviceLogo">
+        <img src="./img/img_info.svg" alt="" height="100" width="100" class="serviceLogo">
         <h3 class="seviceName">Informatique</h3>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum perspiciatis sed optio quisquam porro beatae aspernatur ullam? Iste perspiciatis accusamus sunt? Exercitationem pariatur perferendis qui similique labore nemo est iusto?</p>
+        <p>L'ENSICAEN est reconnue pour son expertise en informatique, et plus particulièrement dans les domaines de la cybersécurité, de l'intelligence artificielle.</p>
         <a href="" class="btn">Plus...</a>
       </div>
       <div class="serviceCard">
-        <img src="./img/icons8-microchip-68.png" alt="" class="serviceLogo">
+        <img src="./img/img_elec.svg" alt="" height="100" width="100" class="serviceLogo">
         <h3 class="seviceName">Electronique</h3>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum perspiciatis sed optio quisquam porro beatae aspernatur ullam? Iste perspiciatis accusamus sunt? Exercitationem pariatur perferendis qui similique labore nemo est iusto?</p>
+        <p>Faites-nous confiance pour la conception de vos systèmes électroniques, capteurs et circuits intégrés pour des solutions sur mesure.</p>
         <a href="" class="btn">Plus...</a>
       </div>
       <div class="serviceCard">
-        <img src="./img/icons8-test-tube-68.png" alt="" class="serviceLogo">
+        <img src="./img/img_chimie.svg" alt="" height="100" width="100" class="serviceLogo">
         <h3 class="seviceName">Chimie</h3>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum perspiciatis sed optio quisquam porro beatae aspernatur ullam? Iste perspiciatis accusamus sunt? Exercitationem pariatur perferendis qui similique labore nemo est iusto?</p>
+        <p> Confiez-nous vos analyses de réactions ou vos étude de contraintes physique !<br><br><br></p>
         <a href="" class="btn">Plus...</a>
       </div>
     </div>
   </section>
 
   <section class="equipe" id="equipe" >
-    <h2 class="heading">Notre Equipe.</h2>
     <div class="memberContainer">
       <div class="memberCardTrack">
       <div class="memberCard">
-        <img src="./img/dog-7630252_640.jpg" alt="">
+        <img src="./img/human.png" alt="">
         <div class="memberCardContainer">
           <h4>Guillain</h4>
           <div>Président.</div>
         </div>
       </div>
       <div class="memberCard">
-        <img src="./img/dog-7630252_640.jpg" alt="">
+        <img src="./img/human.png" alt="">
         <div class="memberCardContainer">
           <h4>Jérome</h4>
           <div>Vice-président.</div>
         </div>
       </div>
       <div class="memberCard">
-        <img src="./img/dog-7630252_640.jpg" alt="">
+        <img src="./img/human.png" alt="">
         <div class="memberCardContainer">
           <h4>Moris</h4>
           <div>Pôle DSI.</div>
         </div>
       </div>
       <div class="memberCard">
-        <img src="./img/dog-7630252_640.jpg" alt="">
+        <img src="./img/human.png" alt="">
         <div class="memberCardContainer">
           <h4>Paul</h4>
           <div>Chargé d'affaire.</div>
         </div>
       </div>
       <div class="memberCard">
-        <img src="./img/dog-7630252_640.jpg" alt="">
+        <img src="./img/human.png" alt="">
         <div class="memberCardContainer">
           <h4>Imane</h4>
           <div>Trésorière.</div>
         </div>
       </div>
       <div class="memberCard">
-        <img src="./img/dog-7630252_640.jpg" alt="">
+        <img src="./img/human.png" alt="">
         <div class="memberCardContainer">
           <h4>Winnie</h4>
           <div>Sécrétaire</div>
         </div>
       </div>
       <div class="memberCard">
-        <img src="./img/dog-7630252_640.jpg" alt="">
+        <img src="./img/human.png" alt="">
         <div class="memberCardContainer">
           <h4>Nour</h4>
           <div>Pôle Communication</div>
@@ -113,39 +112,104 @@
     </div>
   </section>
 
+<!--  <section class="faq" id="faq">
+    <h2 class="heading"> Une question ?</h2>
+     <div class="fapCardContainer">
+      <div class="leftSlide slide"><img src="./img/chevron-left-regular-36.png" alt=""></div>
+      <div class="cardQuestionTracker">
+        <div class="cardQuestion">
+          <h3 class="question"> J'ai une idée et j'aimerais créer un commerce dessus. Pouvez-vous créer le produit pour moi</h3>
+          <p class="answer">
+            Les innovations partent toutes d'une idée. Il est cependant nécessaire de développer cette idée avant de la commercialiser. Développer un produit from scratch demande beaucoup de ressources : Humaines, temporelles, financières, pour la R&D... Aplicaen n'est pas en mesure de fournir ces ressources pour un projet complet.
+Seules les prestations d'Informatique pourront donner lieu à la création d'une solution complète from scratch par Aplicaen. Sinon, nous vous encourageons à créer une entreprise (si vous n'en avez pas encore une), à formaliser votre idée dans un cahier des charges, puis à nous solliciter à nouveau pour une étude de faisabilité. Nous vous fournirons un rapport complet sur votre idée, qui détaillera chaque aspect du cahier des charges. Ce rapport pourra être utilisé pour soutenir votre idée auprès de la Chambre de Commerce.
+La Chambre de Commerce a pour mission d'accompagner les entreprises innovantes dans leur développement. Si votre idée les convainc, ils sauront vous aider pour trouver les personnes compétentes et les finances pour développer votre idée. 
+          </p>
+        </div>
+      </div>
+      <div class="rightSlide slide"><img src="./img/chevron-right-regular-36.png" alt=""></div>
+    </div>
+     <div class="carousel-container">
+      <div class="carousel-button carousel-button--left"><img src="./img/chevron-left-regular-36.png" alt=""></div>
+      <div class="card-carousel">
+        <div class="card">
+          <img src="https://via.placeholder.com/150" alt="Card Image">
+          <div class="card-content">
+            <h3>Card Title</h3>
+            <p>Card Description</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="https://via.placeholder.com/150" alt="Card Image">
+          <div class="card-content">
+            <h3>Card Title</h3>
+            <p>Card Description</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="https://via.placeholder.com/150" alt="Card Image">
+          <div class="card-content">
+            <h3>Card Title</h3>
+            <p>Card Description</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="https://via.placeholder.com/150" alt="Card Image">
+          <div class="card-content">
+            <h3>Card Title</h3>
+            <p>Card Description</p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-button carousel-button--right"><img src="./img/chevron-left-regular-36.png" alt=""></div>
+    </div>
+  </section>
+-->
   <section class="contact" id="contact">
     <h2 class="heading">Contactez Nous!</h2>
     <form action="#">
       <div class="inputBox">
-        <input type="text" name="Full name" placeholder="Full name" id="">
-        <input type="email" name="Email Addddress" placeholder="Email Addddress" id="">
+        <input type="text" name="Full name" placeholder="Nom*" id="">
+        <input type="text" name="Email Addddress" placeholder="Prénom*" id="">
       </div>
       <div class="inputBox">
-        <input type="nummber" name="Mobile Number" placeholder="Mobile Number" id="">
-        <input type="text" name="Email subject" placeholder="Email subject" id="">
+        <input type="email" name="Mobile Number" placeholder="Email*" id="">
+        <input type="tel" name="Email subject" placeholder="Numéro de téléphone" id="">
       </div>
-      <textarea name="" id="" cols="30" rows="10"  placeholder="Bonjour..."></textarea>
+      <div class="inputBox">
+        <input type="text" name="Mobile Number" placeholder="Société" id="">
+        <input type="text" name="Email subject" placeholder="Objet" id="">
+      </div>
+      <textarea name="" id="" cols="30" rows="10"  placeholder="Bonjour...*"></textarea>
+      <div class="inputBox">
+        <input type="file" name="Pièce jointe" id="file-input">
+      </div>
       <input type="submit" value="Envoyer" class="btn">
     </form>
   </section>
 
   <footer class="footer">
-    <div class="footerText">
-      <p>Copyright &copy; 2023 by Orys</p>
-    </div>
-    <div class="adresse">
+<!--     <div class="footerText">
+      <p>Copyright &copy; 2023 by lrys, Guillain</p>
+    </div> -->
+    <div class="adressFooter">
       <ul>
         <li>EML - Ensicaen Mission Lab</li>
         <li>Boulevard Maréchal Juin</li>
         <li>14000 - Caen</li>
+        <br>
+        <li>Copyright &copy; 2023 by lorys, Guillain</li>
       </ul>
+    </div>
+    <div class="contactFooter">
+      <p>Mentions légales</p>
+      <p>Plaquette</p>
+      <p>Numéro de téléphone</p>
     </div>
     <div class="footerSocialLinks">
       <ul>
-        <li id="mail"><a href=""><img src="./img/mail-send-regular-24.png" alt=""></a></li>
-        <li id="Linkedin"><a href=""><img src="./img/linkedin-logo-24.png" alt=""></a></li>
-        <li id="Twitter"><a href=""><img src="./img/twitter-logo-24.png" alt=""></a></li>
-        <li id="instagram" ><a href=""><img src="./img/instagram-logo-24.png" alt=""></a></li>
+        <li id="Linkedin"><a href=""><img src="./img/linkedin-rounded.svg" alt=""></a></li>
+        <li id="Instagram" ><a href=""><img src="./img/instagram-rounded.svg" alt=""></a></li>
+        <li id="Facebook" ><a href=""><img src="./img/facebook-rounded.svg" alt=""></a></li>
       </ul>
     </div>
   </footer>
